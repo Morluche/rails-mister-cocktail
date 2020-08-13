@@ -1,0 +1,51 @@
+<nav class="nav">
+        <div class="container">
+            <div class="logo">
+                <a href="#">L'Ivresse</a>
+            </div>
+            <div id="mainListDiv" class="main_list">
+                <ul class="navlinks">
+                    <li><h2><%= link_to "Add a Cocktail", new_cocktail_path %></h2></li>
+                </ul>
+            </div>
+            <span class="navTrigger">
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
+        </div>
+    </nav>
+    <section class="home">
+      <h1 id="h1" class="text-center">All Cocktails</h1>
+    </section>
+
+<div class="container col-8 mt-5">
+
+
+  <div class="card-columns">
+    <% @cocktails.each do |cocktail| %>
+    <div class="card m-1 mt-2" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title"><%= link_to cocktail.name, cocktail_path(cocktail) %></h5>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
+<div class="text-center">
+</div>
+<!-- Jquery needed -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+<!-- Function used to shrink nav bar removing paddings and adding black background -->
+    <script>
+        $(window).scroll(function() {
+            if ($(document).scrollTop() > 50) {
+                $('.nav').addClass('affix');
+                console.log("OK");
+            } else {
+                $('.nav').removeClass('affix');
+            }
+        });
+    </script>
