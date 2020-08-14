@@ -1,11 +1,11 @@
-<nav class="nav">
+<!-- <nav class="nav">
         <div class="container">
             <div class="logo">
                 <a href="#">L'Ivresse</a>
             </div>
             <div id="mainListDiv" class="main_list">
                 <ul class="navlinks">
-                    <li><h2><%= link_to "Add a Cocktail", new_cocktail_path %></h2></li>
+                    <li><h2><%= link_to Add a Cocktail, new_cocktail_path %></h2></li>
                 </ul>
             </div>
             <span class="navTrigger">
@@ -18,8 +18,10 @@
     <section class="home">
       <h1 id="h1" class="text-center">All Cocktails</h1>
     </section>
+<h2><%= link_to Add a Cocktail, new_cocktail_path %></h2>
+<div class="container col-8 mt-5"> -->
 
-<div class="container col-8 mt-5">
+<li><h2><%= link_to "Add a Cocktail", new_cocktail_path %></h2></li>
 
 
   <div class="card-columns">
@@ -27,6 +29,7 @@
     <div class="card m-1 mt-2" style="width: 18rem;">
       <div class="card-body">
         <h5 class="card-title"><%= link_to cocktail.name, cocktail_path(cocktail) %></h5>
+        <%= cl_image_tag("iq1skshmhvw3ok22grne.jpg", width: 400, height: 300, crop: :fill) %>
       </div>
     </div>
     <% end %>
