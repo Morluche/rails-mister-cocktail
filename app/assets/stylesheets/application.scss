@@ -11,3 +11,28 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+.card a {
+  color:white;
+  text-shadow: 2px 2px 4px #000000;
+
+}
+.card a:hover {
+    text-decoration: none;
+    color:white
+  }
+  .card2 {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    position: relative;
+  }
+
+  .title2 {
+    color: grey;
+    font-size: 18px;
+  }
+.image-show {
+  position: absolute;
+}
